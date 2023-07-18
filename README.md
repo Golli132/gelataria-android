@@ -1,2 +1,0 @@
-# gelataria-android
-gelados
