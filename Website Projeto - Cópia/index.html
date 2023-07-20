@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelataria Jolly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+<nav>
+    <a href="index.html"> <img src="imagens/Logotipo.webp" alt="Jolly"></a>
+<div class="nav-links" id="navLinks">
+    <i class="fa fa-times" onclick="hideMenu()"></i>  
+    <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="about.html">Sobre Nós</a></li>  
+        <li><a href="contacto.html">Contacto</a></li> 
+    </ul>
+</div>
+<i class="fa fa-bars" onclick="showMenu()"></i>
+
+</nav>
+
+<div class="text-box">
+<h1>
+    Gelataria Jolly
+</h1>
+<p>Gelados feitos com paixão desde 2023.</p>
+<a href="contacto.html" class="hero-btn">Visite-nos!</a>
+
+</div>
+    </section>
+
+<section class="Doçuras">
+    <h1>As nossas 3 Doçuras</h1>
+    <p>Comida que alegra o teu dia. </p>
+
+<div class="row">
+
+    <div class="doçuras-col">
+        <h3>Gelados</h3>
+        <p>Refrescante, suave, doce, cremoso, com deliciosos sabores diferentes.</p>
+    </div>
+    <div class="doçuras-col">
+        <h3>Waffles</h3>
+        <p>Crocante, dourado, delicioso, servido quente.</p>
+    </div>
+    <div class="doçuras-col">
+        <h3>Crepes</h3>
+        <p>Leve, saboroso, com sabores e recheios infinitos.</p>
+    </div>
+</div>
+
+</section>
+
+<section class="equipa">
+    
+<h1>A nossa Equipa</h1>
+<p>Os membros que constituem esta incrível equipa.</p>
+
+<div class="row">
+<div class="equipa-col">
+    <img src="imagens/mita.jpg">
+    <h3>Pedro Sarramito</h3>
+    <p>Designer/Programador</p>
+</div>
+<div class="equipa-col">
+    <img src="imagens/picacke.jpg">
+    <h3>Rafael Picareta</h3>
+    <p>Programador de alto nível</p>
+</div>
+<div class="equipa-col">
+    <img src="imagens/golli.jpg">
+    <h3>Gonçalo Rosário</h3>
+    <p>Artista</p>
+</div>
+</div>
+
+</section>
+
+<section class="irContacto">
+<h1>Quer entrar na nossa equipa? Contacte-nos!</h1>
+<a href="contacto.html"class="hero-btn">CONTACTE-NOS</a>
+</section>
+
+<section class="footer">
+    <h4>Sobre a página:</h4>
+    <p>Website criado para o projeto de PAC, ESDMI 2023</p>
+    <p>Feito por: Pedro Sarramito, Rafael Picareta e Gonçalo Rosário.</p>
+</section>
+
+
+
+
+
+
+
+
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right ="0";
+    }
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+</script>
+
+
+</body>
+</html>

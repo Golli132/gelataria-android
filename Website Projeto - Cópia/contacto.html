@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelataria Jolly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+<nav>
+    <a href="index.html"> <img src="imagens/Logotipo.webp" alt="Jolly"></a>
+<div class="nav-links" id="navLinks">
+    <i class="fa fa-times" onclick="hideMenu()"></i>  
+    <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="about.html">Sobre Nós</a></li>  
+        <li><a href="contacto.html">Contacto</a></li> 
+    </ul>
+</div>
+<i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+<h1>Contacte-nos</h1>
+    </section>
+
+<section class="location">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.743227931669!2d-7.867622187919314!3d38.006449298662744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1a747c73fbcbd7%3A0xa78111cff66d7ffb!2sAv.%20Fialho%20de%20Almeida%2059%2C%20Beja!5e0!3m2!1spt-PT!2spt!4v1689800122989!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+
+
+<section class="contacte-nos">
+
+    <div class="row">
+        <div class="contact-col">
+<div>
+    <i class="fa fa-home" ></i>
+    <span>
+        <h5>Avenida Fialho de Almeida, 59</h5>
+        <p>Beja</p>
+    </span>
+</div>
+<div>
+<i class="fa fa-phone"></i>
+    <span>
+        <h5>284023457</h5>
+        <p>7 dias por semana, 9:00 até 19:00</p>
+    </span>
+</div>
+<div>
+    <i class="fa fa-envelope-open-o" ></i>
+    <span>
+        <h5>jollyjolly@gmail.com</h5>
+        <p>Alguma dúvida? Mande-nos um email!</p>
+    </span>
+</div>
+</div>
+        <div class="contact-col">
+
+<form action="">
+    <input type="text" placeholder="Escreva o seu nome" required>
+    <input type="email" placeholder="Escreva o seu email" required>
+    <input type="text" placeholder="Escreva o assunto da mensagem" required>
+    <textarea rows="8" placeholder="Mensagem" required></textarea>
+    <button type="Submeter" class="hero-btn red-btn">Mandar a mensagem.</button>
+</form>
+
+
+        </div> 
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<section class="footer">
+    <h4>Sobre a página:</h4>
+    <p>Website criado para o projeto de PAC, ESDMI 2023</p>
+    <p>Feito por: Pedro Sarramito, Rafael Picareta e Gonçalo Rosário.</p>
+</section>
+
+
+
+
+
+
+
+
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right ="0";
+    }
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+</script>
+
+
+</body>
+</html>

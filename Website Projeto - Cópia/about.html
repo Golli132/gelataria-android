@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelataria Jolly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+<nav>
+    <a href="index.html"> <img src="imagens/Logotipo.webp" alt="Jolly"></a>
+<div class="nav-links" id="navLinks">
+    <i class="fa fa-times" onclick="hideMenu()"></i>  
+    <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="about.html">Sobre Nós</a></li>  
+        <li><a href="contacto.html">Contacto</a></li> 
+    </ul>
+</div>
+<i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+<h1>Sobre nós</h1>
+    </section>
+
+<section class="about-us">
+
+    <div class="row">
+        <div class="about-col">
+            <h1>Objetivo e funcionalidades da Gelataria</h1>
+            <p>O objetivo deste projeto é abrir uma nova gelataria em Beja pois o número de gelatarias nesta localidade é muito reduzido, queremos dar aos residentes e turistas uma nova escolha em termos de comida e ajudar todos a descobrir novos sabores e numerosas alternativas. Esta gelataria é diferente das outras pois tem a opção de pedir por self-service em vez de pedir unicamente pelo balcão, a aplicação permite escolher o doce que quiser e vai diretamente para um carrinho onde pode dar check-out.</p>
+            <a href=""class="hero-btn red-btn">Visite-nos</a>
+        </div>
+        <div class="about-col">
+            <img src="imagens/aboutus2.jpg" alt="">
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="footer">
+    <h4>Sobre a página:</h4>
+    <p>Website criado para o projeto de PAC, ESDMI 2023</p>
+    <p>Feito por: Pedro Sarramito, Rafael Picareta e Gonçalo Rosário.</p>
+</section>
+
+
+
+
+
+
+
+
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right ="0";
+    }
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+</script>
+
+
+</body>
+</html>
