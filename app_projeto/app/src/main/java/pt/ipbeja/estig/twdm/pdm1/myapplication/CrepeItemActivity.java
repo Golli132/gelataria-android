@@ -3,6 +3,9 @@ package pt.ipbeja.estig.twdm.pdm1.myapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +36,7 @@ public class CrepeItemActivity extends AppCompatActivity {
 
             AppDatabase db = AppDatabase.getInstance(this);
             CrepeDao crepeDao = db.getCrepeDao();
+
             this.crepe = crepeDao.getById(crepeId);
             ImageView imageViewItemImg = findViewById(R.id.imageViewItemImg);
             TextView textViewItemPrice = findViewById(R.id.textViewPrice);
@@ -40,7 +44,29 @@ public class CrepeItemActivity extends AppCompatActivity {
 
             Glide.with(this).load(crepe.getCrepeImg()).into(imageViewItemImg);
             textViewItemName.setText(crepe.getCrepeName());
-            textViewItemPrice.setText(crepe.getCrepePrice());
+            textViewItemPrice.setText(String.valueOf(crepe.getCrepePrice()));
+
+            Button buttonAddCart = findViewById(R.id.buttonAddCart);
+            buttonAddCart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String itemName = crepe.getCrepeName();
+                    double price = crepe.getCrepePrice();
+                    int amount = 1;
+
+                    AppDatabase db = AppDatabase.getInstance(CrepeItemActivity.this);
+                    CartDao cartDao = db.getCartDao();
+
+                    Log.i("Click", "Added to cart");
+                    CartItem cartItem = new CartItem(0, itemName, price, amount);
+                    cartDao.insert(cartItem);
+
+                    Intent intent = new Intent(CrepeItemActivity.this, CrepePageActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+
         } else {
             finish();
         }

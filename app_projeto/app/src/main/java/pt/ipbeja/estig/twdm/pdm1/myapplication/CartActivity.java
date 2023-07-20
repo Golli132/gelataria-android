@@ -94,6 +94,6 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
         CartDao cartDao = db.getCartDao();
 
         double totalPrice = cartDao.getTotalPrice();
-        textViewTotalPrice.setText(Double.toString(totalPrice) + " €");
+        textViewTotalPrice.setText(String.valueOf(totalPrice) + " €");
     }
 }

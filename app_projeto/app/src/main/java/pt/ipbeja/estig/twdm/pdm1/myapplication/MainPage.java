@@ -10,17 +10,18 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainPage extends AppCompatActivity {
-    ImageView gelado;
-    ImageView crepe;
-    ImageView waffle;
+    ImageView imageViewGelado;
+    ImageView imageViewCrepe;
+    ImageView imageViewWaffle;
+    ImageView imageViewGoToCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
-        gelado = (ImageView) findViewById(R.id.sendToGelado);
-        gelado.setOnClickListener(new View.OnClickListener() {
+        imageViewGelado = (ImageView) findViewById(R.id.sendToGelado);
+        imageViewGelado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("Click", "Gelado");
@@ -29,23 +30,32 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
-        crepe = (ImageView) findViewById(R.id.sendToCrepe);
-        crepe.setOnClickListener(new View.OnClickListener() {
+        imageViewCrepe = (ImageView) findViewById(R.id.sendToCrepe);
+        imageViewCrepe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("Click", "Crepe");
-                Intent int2 = new Intent(MainPage.this, Crepe.class);
+                Intent int2 = new Intent(MainPage.this, CrepePageActivity.class);
                 startActivity(int2);
             }
         });
 
-        waffle = (ImageView) findViewById(R.id.sendToWaffle);
-        waffle.setOnClickListener(new View.OnClickListener() {
+        imageViewWaffle = (ImageView) findViewById(R.id.sendToWaffle);
+        imageViewWaffle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("Click", "Waffle");
                 Intent int3 = new Intent(MainPage.this, WafflePageActivity.class);
                 startActivity(int3);
+            }
+        });
+
+        imageViewGoToCart = (ImageView) findViewById(R.id.imageViewCart5);
+        imageViewGoToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int4 = new Intent(MainPage.this, CartActivity.class);
+                startActivity(int4);
             }
         });
     }

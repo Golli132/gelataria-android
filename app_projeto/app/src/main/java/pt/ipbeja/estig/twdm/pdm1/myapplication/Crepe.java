@@ -11,10 +11,10 @@ public class Crepe {
     @PrimaryKey
     private long crepeId;
     private String crepeName;
-    private String crepePrice;
+    private double crepePrice;
     private String crepeImg;
 
-    public Crepe(long crepeId, String crepeName, String crepePrice, String crepeImg){
+    public Crepe(long crepeId, String crepeName, double crepePrice, String crepeImg){
         this.crepeId = crepeId;
         this.crepeName = crepeName;
         this.crepePrice = crepePrice;
@@ -29,7 +29,7 @@ public class Crepe {
         return crepeName;
     }
 
-    public String getCrepePrice() {
+    public double getCrepePrice() {
         return crepePrice;
     }
 

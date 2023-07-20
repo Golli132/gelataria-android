@@ -25,15 +25,14 @@ public class GeladoAdapter extends RecyclerView.Adapter<GeladoAdapter.GeladoView
 
     @NonNull
     public GeladoViewHolder onCreateViewHolder(@NonNull ViewGroup parent,int ViewType){
-        View rootView = LayoutInflater.from(parent.getContext()).inflate(R.layout.gelado_items, parent, false);
+        View rootView = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_items, parent, false);
         return new GeladoViewHolder(rootView);
     }
-
 
     public void onBindViewHolder(@NonNull GeladoViewHolder holder, int position){
         final Gelado gelItems = this.geladoItems.get(position);
         holder.textViewIceName.setText(gelItems.getGelName());
-        holder.textViewIcePrice.setText(gelItems.getGelPrice());
+        holder.textViewIcePrice.setText(String.valueOf(gelItems.getGelPrice()) + " €");
         Glide.with(holder.rootView.getContext()).load(gelItems.getGelImg()).into(holder.imageViewIceItem);
 
         holder.rootView.setOnClickListener(new View.OnClickListener() {

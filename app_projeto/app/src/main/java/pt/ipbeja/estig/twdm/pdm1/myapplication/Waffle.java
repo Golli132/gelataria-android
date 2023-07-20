@@ -8,10 +8,10 @@ public class Waffle {
     @PrimaryKey
     private long waffleId;
     private String waffleName;
-    private String wafflePrice;
+    private double wafflePrice;
     private String waffleImg;
 
-    public Waffle(long waffleId, String waffleName, String wafflePrice, String waffleImg){
+    public Waffle(long waffleId, String waffleName, double wafflePrice, String waffleImg){
         this.waffleId = waffleId;
         this.waffleName = waffleName;
         this.wafflePrice = wafflePrice;
@@ -26,7 +26,7 @@ public class Waffle {
         return waffleName;
     }
 
-    public String getWafflePrice() {
+    public double getWafflePrice() {
         return wafflePrice;
     }
 

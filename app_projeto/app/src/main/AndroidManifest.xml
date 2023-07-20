@@ -33,6 +33,18 @@
             android:exported="false"/>
         <activity android:name=".WaffleItemActivity"
             android:exported="false"/>
+        <activity android:name=".CrepePageActivity"
+            android:exported="false"/>
+        <activity android:name=".CrepeItemActivity"
+            android:exported="false"/>
+        <activity android:name=".ToppingsPageActivity"
+            android:exported="false"/>
+        <activity android:name=".ToppingsItemActivity"
+            android:exported="false"/>
+        <activity android:name=".CartActivity"
+            android:exported="false"/>
+        <activity android:name=".PagamentoActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -25,15 +25,14 @@ public class CrepeAdapter extends RecyclerView.Adapter<CrepeAdapter.CrepeViewHol
 
     @NonNull
     public CrepeViewHolder onCreateViewHolder(@NonNull ViewGroup parent,int ViewType){
-        View rootView = LayoutInflater.from(parent.getContext()).inflate(R.layout.crepe_items, parent, false);
+        View rootView = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_items, parent, false);
         return new CrepeViewHolder(rootView);
     }
-
 
     public void onBindViewHolder(@NonNull CrepeViewHolder holder, int position){
         final Crepe crepeItems = this.crepeItems.get(position);
         holder.textViewCrepeName.setText(crepeItems.getCrepeName());
-        holder.textViewCrepePrice.setText(crepeItems.getCrepePrice());
+        holder.textViewCrepePrice.setText(String.valueOf(crepeItems.getCrepePrice()) + " €");
         Glide.with(holder.rootView.getContext()).load(crepeItems.getCrepeImg()).into(holder.imageViewCrepeItem);
 
         holder.rootView.setOnClickListener(new View.OnClickListener() {

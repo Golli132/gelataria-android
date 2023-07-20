@@ -1,6 +1,10 @@
 package pt.ipbeja.estig.twdm.pdm1.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +14,9 @@ import java.util.List;
 
 public class WafflePageActivity extends AppCompatActivity  implements WaffleAdapter.WaffleAdapterEventListener{
     private WaffleAdapter waffleAdapter;
+    ImageView imageViewGoHome;
+    ImageView imageViewCart;
+    Button buttonToppings2;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -25,6 +32,33 @@ public class WafflePageActivity extends AppCompatActivity  implements WaffleAdap
 
         List<Waffle> newWaffleList = AppDatabase.getInstance(this).getWaffleDao().getAll();
         this.waffleAdapter.refreshList(newWaffleList);
+
+        imageViewGoHome = (ImageView) findViewById(R.id.imageViewGoBack2);
+        imageViewGoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WafflePageActivity.this, MainPage.class);
+                startActivity(intent);
+            }
+        });
+
+        imageViewCart = (ImageView) findViewById(R.id.imageViewCart2);
+        imageViewCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int2 = new Intent(WafflePageActivity.this, CartActivity.class);
+                startActivity(int2);
+            }
+        });
+
+        buttonToppings2 = (Button) findViewById(R.id.buttonGoToToppings2);
+        buttonToppings2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int4 = new Intent(WafflePageActivity.this, ToppingsPageActivity.class);
+                startActivity(int4);
+            }
+        });
     }
 
     @Override

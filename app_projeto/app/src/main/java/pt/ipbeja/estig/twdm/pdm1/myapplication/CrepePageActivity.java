@@ -1,6 +1,10 @@
 package pt.ipbeja.estig.twdm.pdm1.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,12 +14,15 @@ import java.util.List;
 
 public class CrepePageActivity extends AppCompatActivity  implements CrepeAdapter.CrepeAdapterEventListener{
     private CrepeAdapter crepeAdapter;
+    ImageView imageViewGoHome;
+    ImageView imageViewCart;
+    Button buttonToppings3;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crepe);
 
-        RecyclerView recyclerViewCrepe = findViewById(R.id.recyclerViewCrepeItem);
+        RecyclerView recyclerViewCrepe = findViewById(R.id.recyclerViewCartItem);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
@@ -25,6 +32,33 @@ public class CrepePageActivity extends AppCompatActivity  implements CrepeAdapte
 
         List<Crepe> newCrepeList = AppDatabase.getInstance(this).getCrepeDao().getAll();
         this.crepeAdapter.refreshList(newCrepeList);
+
+        imageViewGoHome = (ImageView) findViewById(R.id.imageViewGoBack3);
+        imageViewGoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CrepePageActivity.this, MainPage.class);
+                startActivity(intent);
+            }
+        });
+
+        imageViewCart = (ImageView) findViewById(R.id.imageViewCart3);
+        imageViewCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int2 = new Intent(CrepePageActivity.this, CartActivity.class);
+                startActivity(int2);
+            }
+        });
+
+        buttonToppings3 = (Button) findViewById(R.id.buttonGoToToppings3);
+        buttonToppings3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int4 = new Intent(CrepePageActivity.this, ToppingsPageActivity.class);
+                startActivity(int4);
+            }
+        });
     }
 
     @Override

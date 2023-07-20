@@ -9,10 +9,11 @@ import androidx.room.PrimaryKey;
         @PrimaryKey
         private long gelId;
         private String gelName;
-        private String gelPrice;
+        private double gelPrice;
         private String gelImg;
 
-        public Gelado(long gelId, String gelName, String gelPrice, String gelImg){
+
+        public Gelado(long gelId, String gelName, double gelPrice, String gelImg){
             this.gelId = gelId;
             this.gelName = gelName;
             this.gelPrice = gelPrice;
@@ -23,11 +24,9 @@ import androidx.room.PrimaryKey;
             return gelId;
         }
 
-        public String getGelName() {
-            return gelName;
-        }
+        public String getGelName() { return gelName; }
 
-        public String getGelPrice() {
+        public double getGelPrice() {
             return gelPrice;
         }
 

@@ -25,7 +25,7 @@ public class WaffleAdapter extends RecyclerView.Adapter<WaffleAdapter.WaffleView
 
     @NonNull
     public WaffleViewHolder onCreateViewHolder(@NonNull ViewGroup parent,int ViewType){
-        View rootView = LayoutInflater.from(parent.getContext()).inflate(R.layout.waffle_items, parent, false);
+        View rootView = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_items, parent, false);
         return new WaffleViewHolder(rootView);
     }
 
@@ -33,7 +33,7 @@ public class WaffleAdapter extends RecyclerView.Adapter<WaffleAdapter.WaffleView
     public void onBindViewHolder(@NonNull WaffleViewHolder holder, int position){
         final Waffle waffleItems = this.waffleItems.get(position);
         holder.textViewWaffleName.setText(waffleItems.getWaffleName());
-        holder.textViewWafflePrice.setText(waffleItems.getWafflePrice());
+        holder.textViewWafflePrice.setText(String.valueOf(waffleItems.getWafflePrice()) + " €");
         Glide.with(holder.rootView.getContext()).load(waffleItems.getWaffleImg()).into(holder.imageViewWaffleItem);
 
         holder.rootView.setOnClickListener(new View.OnClickListener() {
@@ -61,9 +61,9 @@ public class WaffleAdapter extends RecyclerView.Adapter<WaffleAdapter.WaffleView
         public WaffleViewHolder(@NonNull View rootView){
             super(rootView);
             this.rootView = rootView;
-            this.textViewWaffleName = rootView.findViewById(R.id.textViewWaffleName);
-            this.textViewWafflePrice = rootView.findViewById(R.id.textViewWafflePrice);
-            this.imageViewWaffleItem = rootView.findViewById(R.id.imageViewWaffleItem);
+            this.textViewWaffleName = rootView.findViewById(R.id.textViewItemName);
+            this.textViewWafflePrice = rootView.findViewById(R.id.textViewItemPrice);
+            this.imageViewWaffleItem = rootView.findViewById(R.id.imageViewItem);
         }
     }
 

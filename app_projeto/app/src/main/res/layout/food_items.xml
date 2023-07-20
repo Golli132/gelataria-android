@@ -6,13 +6,13 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="379dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="32dp"
         app:cardBackgroundColor="#DAFFFFFF"
-        app:cardCornerRadius="5dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,7 +20,7 @@
             android:id="@+id/imageViewItem"
             android:layout_width="141dp"
             android:layout_height="127dp"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="6dp"
             android:layout_marginTop="30dp"
             app:srcCompat="@drawable/baseline_icecream_24" />
 

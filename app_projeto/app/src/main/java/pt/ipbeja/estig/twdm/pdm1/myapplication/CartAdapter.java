@@ -74,8 +74,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 amount++;
                 cartDao.updateAmount(amount, cartItem.getItemId());
 
-                cartItem.setAmount(amount); // Update the CartItem's amount
-                holder.textViewItemAmount.setText(Integer.toString(amount)); // Update the TextView
+                cartItem.setAmount(amount);
+                holder.textViewItemAmount.setText(Integer.toString(amount));
 
                 if (listener != null) {
                     listener.onAddAmountClicked(cartItem);
@@ -95,7 +95,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                     holder.textViewItemAmount.setText(Integer.toString(amount));
 
                     if (amount == 0) {
-                        cartDao.delete(cartItem); // Remove the item from the cart
+                        cartDao.delete(cartItem);
                         if (listener != null) {
                             listener.onDeleteClicked(cartItem);
                         }
